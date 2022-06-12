@@ -25,4 +25,8 @@ CMD python /app/app.py
 
 Ao executar uma imagem e gerar um contêiner, você adiciona uma nova camada gravável (a “camada de contêiner”) sobre as camadas subjacentes. Todas as alterações feitas no contêiner em execução, como gravar novos arquivos, modificar arquivos existentes e excluir arquivos, são gravadas nessa camada de contêiner gravável.
 
-Para saber mais sobre camadas de imagem (e como o Docker cria e armazena imagens), consulte Sobre drivers de armazenamento.
+### Orientações e recomendações gerais
+Criar contêineres efêmeros
+A imagem definida pelo seu Dockerfile deve gerar contêineres tão efêmeros quanto possível. Por "efêmero", queremos dizer que o contêiner pode ser parado e destruído, depois reconstruído e substituído com uma configuração e configuração mínimas absolutas.
+
+Consulte Processos na metodologia The Twelve-factor App para ter uma ideia das motivações da execução de contêineres de maneira tão sem estado.
