@@ -17,10 +17,10 @@ CMD python /app/app.py
 
 ### Cada instrução cria uma camada
 ```
-- **FROM** - cria uma camada a partir da imagem ubuntu:18.04 Docker;
-- **COPY** - adiciona arquivos do diretório atual do seu cliente Docker;
-- **RUN** - constrói sua aplicação com make;
-- **CMD** - especifica qual comando executar dentro do contêiner.
+- FROM - cria uma camada a partir da imagem ubuntu:18.04 Docker;
+- COPY - adiciona arquivos do diretório atual do seu cliente Docker;
+- RUN - constrói sua aplicação com make;
+- CMD - especifica qual comando executar dentro do contêiner.
 ```
 
 Ao executar uma imagem e gerar um contêiner, você adiciona uma nova camada gravável (a “camada de contêiner”) sobre as camadas subjacentes. Todas as alterações feitas no contêiner em execução, como gravar novos arquivos, modificar arquivos existentes e excluir arquivos, são gravadas nessa camada de contêiner gravável.
